@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("Welcome to the number guessing game......\n");
+		int num=69;
+		int times=10;
+	    while (true) 
+	    {
+	        Scanner in = new Scanner(System.in);
+	        System.out.println("");
+	        System.out.println("You have " + times + " Chances left");
+	        System.out.println("Please Enter the number(1-100): ");
+	        int n =in.nextInt();
+	        if(n==num)
+	         {
+	            System.out.println("Congratulations........ \nYou have guessed the number correctly");
+	            break;
+	         }
+	        else if(n<num)
+	         {
+	            System.out.print("Your Guess is low");
+	         }
+	        else
+	         {
+	            System.out.println("Your Guess is high");
+	         }
+	        times--;
+	        if(times==0)
+	        {
+	            System.out.println("You have Reached Maximum number of Guesses");
+	            break;
+	        }
+	    }
+	}
+}
